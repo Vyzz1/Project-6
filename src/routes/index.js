@@ -24,7 +24,7 @@ export const routes = [
     children: [
       {
         index: true,
-        element: <Dashboard />,
+        element: <Home />,
       },
       {
         path: "book-room",
@@ -37,10 +37,6 @@ export const routes = [
       {
         path: "create-room",
         element: <CreateRoom />,
-      },
-      {
-        path: "home",
-        element: <Home />,
       },
       {
         path: "/search/:city/:text",
@@ -59,8 +55,8 @@ export const routes = [
         element: <PrivateRoutes />,
         children: [
           {
-            index: true,
-            element: <LayoutDefault />,
+            path: "/dashboard",
+            element: <Dashboard />,
           },
 
           {

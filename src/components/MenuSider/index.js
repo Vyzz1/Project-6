@@ -18,7 +18,7 @@ function MenuSider() {
   const handleDelete = () => {
     document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     document.cookie = "info=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    navigate("/home");
+    navigate("/");
   };
   let items = [];
   const [company, setCompany] = useState([]);
@@ -48,7 +48,7 @@ function MenuSider() {
       {
         key: "/",
         icon: <DashboardOutlined />,
-        label: <Link to={"/"}>Dashboard</Link>,
+        label: <Link to={"/dashboard"}>Dashboard</Link>,
       },
       {
         key: "settings",
@@ -97,7 +97,7 @@ function MenuSider() {
         key: "company",
         icon: <BankOutlined />,
         label: "Danh sách công ty",
-        children: company.map((value, index) => ({
+        children: company.map((value) => ({
           key: Math.random() * 100,
           label: <Link to={`company/${value.id}`}>{value.companyName}</Link>,
         })),

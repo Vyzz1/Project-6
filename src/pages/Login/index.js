@@ -49,7 +49,7 @@ function Login() {
       };
       openNotification(str);
       setTimeout(() => {
-        navigate("/");
+        navigate("/dashboard");
       }, 2000);
     } else {
       let str = {
