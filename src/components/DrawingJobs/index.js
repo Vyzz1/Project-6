@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 function DrawingJobs({ data }) {
   const navigate = useNavigate();
   const handleBackHome = () => {
-    navigate("/home");
+    navigate("/");
   };
   let randomColors = getRandomItemsFromArray(color, 2);
   const handleOnClick = function (id) {
