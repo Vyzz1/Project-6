@@ -1,0 +1,9 @@
+.card_description{
+    max-height: 180px;
+    overflow: auto;
+}
+.job_wrapper{
+    position: sticky;
+    top: 80px;
+z-index: 1;
+}

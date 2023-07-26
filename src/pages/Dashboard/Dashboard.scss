@@ -1,0 +1,58 @@
+.jobs_number {
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  &_value {
+    margin-left: 25px;
+    h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+    p {
+      margin: 0;
+      color: rgb(95, 95, 201);
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
+  &-icon {
+    font-size: 25px;
+    color: darkgray;
+  }
+  &_img {
+    margin-right: 15px;
+  }
+  &_count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > .jobs_number_value {
+      margin: 5px 0;
+      span {
+        font-size: 17px;
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+  }
+}
+.card_dash {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+}
+.item {
+  padding: 10px 25px;
+}
+.box-test .jobs__salary {
+  color: red;
+  font-weight: 400;
+}
+.container_box {
+  padding: 0;
+  border-radius: 5px;
+}

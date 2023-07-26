@@ -1,0 +1,45 @@
+.mini-notify__dropdown {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 3px;
+  background: #fff;
+  min-width: 300px;
+}
+
+.mini-notify__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mini-notify__body > ul {
+  box-shadow: none !important;
+}
+
+.mini-notify__item {
+  display: flex;
+  align-items: center;
+}
+
+.mini-notify__item-icon {
+  background: #e7effa;
+  color: #3f87f5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.mini-notify__item-title {
+  font-size: 16px;
+}
+
+.mini-notify__item-time {
+  font-size: 13px;
+  color: #3c3c3c;
+}

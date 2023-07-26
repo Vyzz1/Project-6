@@ -1,0 +1,110 @@
+.box1 {
+  margin-right: 20px;
+}
+.jobs_detail {
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  position: sticky !important;
+  top: 80px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  z-index: 99;
+  h3 {
+    font-size: 28px;
+  }
+  &__location {
+    span {
+      font-size: 18px;
+      font-weight: 600 !important;
+      color: red;
+    }
+  }
+  .jobs__salary {
+    margin: 25px 0;
+    font-size: 20px;
+    span {
+      font-size: 25px;
+    }
+  }
+  &_button {
+    width: 100%;
+    margin-bottom: 25px;
+    button {
+      width: 80%;
+    }
+  }
+}
+.jobs-company {
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 25px;
+
+  &__location {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #ccc;
+    font-weight: 550;
+  }
+  &__posted {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+}
+.jobs-company__nation {
+  margin: 25px 0;
+  font-size: 18px;
+  font-weight: 550;
+  span {
+    margin-left: 10px;
+  }
+}
+.jobs__info {
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 25px;
+  p {
+    color: #8d4343;
+    font-size: 17px;
+    line-height: 18px;
+  }
+}
+.box2 {
+  position: sticky;
+  top: 80px;
+  z-index: 99;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.box2 .company {
+  display: block;
+  &__wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &__website {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin-left: 15px;
+      font-size: 16px;
+      color: #437ae9;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    &-icon {
+      font-size: 30px;
+      color: #ada1df;
+      cursor: pointer;
+    }
+  }
+}
+.jobs_aplly {
+  display: flex;
+  justify-content: center;
+}

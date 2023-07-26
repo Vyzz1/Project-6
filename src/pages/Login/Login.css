@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.box_head{
+    margin: 25px 0;
+    text-align: center;
+}
+.box_head .title{
+    font-size: 25px;
+    font-weight: 600;
+
+
+}
+.box_head .subtitle{
+    font-weight: 300;
+    color: cadetblue;
+}

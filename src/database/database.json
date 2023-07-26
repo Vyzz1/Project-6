@@ -1,0 +1,64 @@
+{
+  "rooms": [
+    {
+      "name": "Phòng 01",
+      "quantityBed": 2,
+      "quantityPeople": 5,
+      "description": "Lorem...",
+      "utils": [
+        "Điều hòa",
+        "Tủ lạnh"
+      ],
+      "status": true,
+      "id": 1
+    },
+    {
+      "name": "Phòng 02",
+      "quantityBed": 3,
+      "quantityPeople": 6,
+      "description": "Lorem...",
+      "utils": [
+        "Nóng lạnh",
+        "Tủ lạnh"
+      ],
+      "status": true,
+      "type": true,
+      "id": 2
+    },
+    {
+      "name": "Phòng 03",
+      "quantityBed": 1,
+      "quantityPeople": 1,
+      "description": "Lorem",
+      "utils": [
+        "Điều hòa 3",
+        "Điều hòa 4"
+      ],
+      "status": true,
+      "id": 3
+    },
+    {
+      "name": "Phòng 04",
+      "quantityBed": 2,
+      "quantityPeople": 6,
+      "description": "Lorem",
+      "utils": [
+        "Nóng lạnh",
+        "Tủ lạnh"
+      ],
+      "status": false,
+      "id": 4
+    },
+    {
+      "name": "nguyenthia",
+      "quantityBed": 1,
+      "quantityPeople": 1,
+      "description": "123",
+      "utils": [
+        "Nóng lạnh"
+      ],
+      "status": true,
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+.input {
+  margin: 0 15px !important;
+}
+.tag {
+  height: 35px;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 8px !important;
+  font-size: 14px;
+}
+.boxCompany {
+  //   margin: 0 15px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 250px;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+  &__name {
+    font-size: 18px;
+    color: #02090c;
+    font-weight: 600;
+  }
+  &__inner {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &__address {
+    color: #ccc;
+    font-weight: 300;
+    font-size: 15px;
+  }
+  &__rate {
+    margin-bottom: 35px;
+  }
+  &__quantity {
+    text-decoration: underline;
+    font-size: 14px;
+    color: blue;
+  }
+  &__button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

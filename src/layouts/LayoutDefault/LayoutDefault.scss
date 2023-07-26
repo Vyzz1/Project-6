@@ -1,0 +1,54 @@
+.layout {
+  &__header {
+    display: flex;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  &__logo {
+    width: 200px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &--fold {
+      width: 80px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex: 1;
+  }
+
+  &__main {
+    margin-left: 200px;
+    transition: all 0.2s;
+
+    &--fold {
+      margin-left: 80px;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__sider {
+    position: fixed !important;
+    z-index: 1;
+    top: 70px;
+    left: 0;
+    height: calc(100vh - 70px);
+    font-size: 20px;
+  }
+}

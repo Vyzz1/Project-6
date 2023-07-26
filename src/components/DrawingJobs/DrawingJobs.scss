@@ -1,0 +1,73 @@
+.jobs {
+  background: #ffffff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: box-shadow border 2ms ease;
+  will-change: transform;
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: content-box;
+  margin-bottom: 30px;
+  border: 1px dashed #437ae9;
+  &:hover {
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px,
+      rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px,
+      rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    border: 1px solid #437ae9;
+  }
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    background-color: deeppink;
+    transition: all 250ms ease-in-out;
+  }
+
+  &__time {
+    font-size: 15px;
+    color: #b4b4b4;
+    font-weight: 400;
+  }
+  &__name {
+    font-size: 19px;
+    font-weight: 650;
+    color: #6980dd;
+    margin: 10px 0;
+  }
+  &__salary {
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      color: darkslategray;
+    }
+  }
+  &__location {
+    margin: 25px 0;
+  }
+}
+.icon_location {
+  margin-right: 8px;
+}
+.span_city {
+  font-weight: 500;
+  font-size: 14px;
+}
+.button__jobs {
+  align-self: center;
+}
+.jobs__tags .tag {
+  padding: 3px 12px !important;
+  height: auto;
+  width: auto;
+  margin-bottom: 8px;
+}
