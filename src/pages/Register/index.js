@@ -1,13 +1,4 @@
-import {
-  Col,
-  Input,
-  Row,
-  Button,
-  notification,
-  Form,
-  InputNumber,
-  Space,
-} from "antd";
+import { Input, Button, notification, Form, InputNumber, Space } from "antd";
 import React, { useEffect, useState } from "react";
 import "./Register.css";
 import { Get } from "../../utils/requestFirebase";
