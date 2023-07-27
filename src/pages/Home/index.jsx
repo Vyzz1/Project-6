@@ -48,7 +48,7 @@ function Home() {
 
   useEffect(() => {
     if (windowWidth < 500) {
-      setNewArrayLength(4);
+      setNewArrayLength(3);
     } else {
       setNewArrayLength(6);
     }
@@ -173,7 +173,7 @@ function Home() {
             <Col>
               <Form.Item>
                 <div style={{ display: "flex" }}>
-                  <span> Gợi ý cho bạn :</span>
+                  <span> Gợi ý cho bạn </span>
                   <div
                     style={{
                       marginLeft: "10px",

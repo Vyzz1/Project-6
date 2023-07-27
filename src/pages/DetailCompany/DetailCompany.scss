@@ -63,9 +63,14 @@
     @media (max-width: 576.99px) {
       margin-left: 0 !important;
       margin-top: 25px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     &-quantity,
     &-percent {
+      margin: 5px 0;
       color: #b5b5b1;
       strong {
         color: #001c0c;
@@ -140,7 +145,7 @@
   border-radius: 8px;
   @media (max-width: 576px) {
     margin-left: 0 !important;
-    padding-left: 18px;
+    padding-left: 10px;
   }
   @media (max-width: 576px) {
     width: 100%;

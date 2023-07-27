@@ -36,7 +36,7 @@ function DrawingCompany({ company }) {
                     xl={{ span: 12, offset: 0 }}
                     xs={{
                       span: 12,
-                      offset: 5,
+                      offset: 0,
                     }}
                   >
                     <Button
@@ -56,7 +56,7 @@ function DrawingCompany({ company }) {
                     xl={{ span: 12, offset: 0 }}
                     xs={{
                       span: 12,
-                      offset: 5,
+                      offset: 0,
                     }}
                   >
                     <Button

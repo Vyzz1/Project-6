@@ -231,7 +231,11 @@ function DetailJobs() {
         </Row>
       )}
       <Row>
-        <Col xl={{ span: 12, offset: 6 }}>
+        <Col
+          xl={{ span: 12, offset: 6 }}
+          sm={{ span: 24, offset: 0 }}
+          xs={{ span: 24, offset: 0 }}
+        >
           <Form onFinish={hanldeFinish}>
             <h2 ref={formRef}> Điền thông tin ứng tuyển </h2>
             <Form.Item
@@ -256,7 +260,7 @@ function DetailJobs() {
               ]}
               label="Thành phố"
             >
-              <Input placeholder="Type your phone" size="large"></Input>
+              <Input placeholder="Type your city" size="large"></Input>
             </Form.Item>
             <Form.Item
               name="phone"

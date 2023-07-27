@@ -18,6 +18,7 @@ import {
   LoginOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
+import { RiMenu3Line } from "react-icons/ri";
 const { Sider, Content } = Layout;
 
 function LayoutDefault() {
@@ -175,8 +176,7 @@ function LayoutDefault() {
                   }}
                 >
                   <Space>
-                    Menu
-                    <DragOutlined />
+                    <RiMenu3Line size={25} color="#2656ba" />
                   </Space>
                 </Dropdown>
               </Space>
