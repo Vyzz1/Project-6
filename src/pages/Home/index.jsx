@@ -15,7 +15,8 @@ import "./Home.scss";
 import { getRandomItemsFromArray } from "../../helpers/helpers";
 import { color } from "../../utils/color";
 import { AiOutlineArrowRight, AiOutlinePlus } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Title from "antd/es/typography/Title";
 
 function Home() {
   const [city, setCity] = useState([]);
@@ -101,7 +102,7 @@ function Home() {
     if (city == null || city === "Tất cả thành phố") {
       city = "all";
     }
-    if (searching == undefined) {
+    if (searching === undefined) {
       searching = "all";
     }
 
@@ -127,7 +128,7 @@ function Home() {
   };
   return (
     <>
-      <h2 style={{ textAlign: "center" }}>Trang chủ</h2>
+      <Title style={{ textAlign: "center" }}>TRANG CHỦ</Title>
       <Context.Provider value={contextValue}>
         {contextHolder}
         <Form onFinish={handleFinish}>
@@ -242,6 +243,9 @@ function Home() {
               </div>
             </Col>
           ))}
+        <div style={{ marginTop: "12px" }}>
+          <Link to={"/register"}>Đăng ký làm nhà tuyển dụng</Link>
+        </div>
       </Row>
     </>
   );

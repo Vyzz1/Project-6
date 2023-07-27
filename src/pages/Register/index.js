@@ -100,155 +100,149 @@ function Login() {
               </div>
             </div>
 
-            <Row>
-              <Col xl={{ span: 12, offset: 6 }} lg={12} md={12} sm={24} xs={24}>
-                <Form.Item
-                  label="Tên công ty"
-                  name="companyName"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your company name!",
-                    },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-                <Form.Item
-                  label="Email"
-                  name="email"
-                  rules={[
-                    { required: true, message: "Please input your email" },
-                  ]}
-                >
-                  <Input placeholder="Enter your email" />
-                </Form.Item>
-                <Form.Item
-                  label="Password"
-                  name="password"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your password!",
-                    },
-                  ]}
-                >
-                  <Input.Password placeholder="Enter your password" />
-                </Form.Item>
-                <Form.Item
-                  label="Confirm Password"
-                  name="confirmPassword"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your password again!",
-                    },
-                  ]}
-                >
-                  <Input.Password placeholder="Enter your password again" />
-                </Form.Item>
-                <Form.Item
-                  label="Telephone"
-                  name="phone"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your phone!",
-                    },
-                  ]}
-                >
-                  <Input placeholder="Enter your company's phone" />
-                </Form.Item>
-                <Form.Item
-                  label="Address"
-                  name="address"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your phone!",
-                    },
-                  ]}
-                >
-                  <Input placeholder="Enter your company's description" />
-                </Form.Item>
-                <Form.Item
-                  label="Description"
-                  name="description"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your description!",
-                    },
-                  ]}
-                >
-                  <Input.TextArea
-                    placeholder="Enter your company's description"
-                    showCount
-                  />
-                </Form.Item>
-                <Form.Item
-                  label="Detail Company"
-                  name="detail"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your detail!",
-                    },
-                  ]}
-                >
-                  <Input.TextArea
-                    placeholder="Ex: Top 3 reason to join us..."
-                    showCount
-                  />
-                </Form.Item>
-                <Form.Item
-                  label="Working Time"
-                  name="workingTime"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your detail!",
-                    },
-                  ]}
-                >
-                  <Input placeholder="Ex : T2-T7 " />
-                </Form.Item>
-                <Form.Item
-                  label="Website"
-                  name="website"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your detail!",
-                    },
-                  ]}
-                >
-                  <Input placeholder="Ex : www.google.com" />
-                </Form.Item>
-                <Form.Item
-                  label="Quantity People"
-                  name="quantityPeople"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your detail!",
-                    },
-                  ]}
-                >
-                  <InputNumber min={1} />
-                </Form.Item>
-                <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                  <Space>
-                    <Button htmlType="reset"> Tạo lại </Button>
+            <Form.Item
+              label="Tên công ty"
+              name="companyName"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your company name!",
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              label="Email"
+              name="email"
+              rules={[{ required: true, message: "Please input your email" }]}
+            >
+              <Input placeholder="Enter your email" />
+            </Form.Item>
+            <Form.Item
+              label="Password"
+              name="password"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your password!",
+                },
+              ]}
+            >
+              <Input.Password placeholder="Enter your password" />
+            </Form.Item>
+            <Form.Item
+              label="Confirm Password"
+              name="confirmPassword"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your password again!",
+                },
+              ]}
+            >
+              <Input.Password placeholder="Enter your password again" />
+            </Form.Item>
+            <Form.Item
+              label="Telephone"
+              name="phone"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your phone!",
+                },
+              ]}
+            >
+              <Input placeholder="Enter your company's phone" />
+            </Form.Item>
+            <Form.Item
+              label="Address"
+              name="address"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your phone!",
+                },
+              ]}
+            >
+              <Input placeholder="Enter your company's description" />
+            </Form.Item>
+            <Form.Item
+              label="Description"
+              name="description"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your description!",
+                },
+              ]}
+            >
+              <Input.TextArea
+                placeholder="Enter your company's description"
+                showCount
+              />
+            </Form.Item>
+            <Form.Item
+              label="Detail Company"
+              name="detail"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your detail!",
+                },
+              ]}
+            >
+              <Input.TextArea
+                placeholder="Ex: Top 3 reason to join us..."
+                showCount
+              />
+            </Form.Item>
+            <Form.Item
+              label="Working Time"
+              name="workingTime"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your detail!",
+                },
+              ]}
+            >
+              <Input placeholder="Ex : T2-T7 " />
+            </Form.Item>
+            <Form.Item
+              label="Website"
+              name="website"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your detail!",
+                },
+              ]}
+            >
+              <Input placeholder="Ex : www.google.com" />
+            </Form.Item>
+            <Form.Item
+              label="Quantity People"
+              name="quantityPeople"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your detail!",
+                },
+              ]}
+            >
+              <InputNumber min={1} />
+            </Form.Item>
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <Space>
+                <Button htmlType="reset"> Tạo lại </Button>
 
-                    <Button type="primary" htmlType="submit">
-                      {" "}
-                      Tạo{" "}
-                    </Button>
-                  </Space>
-                </div>
-              </Col>
-            </Row>
+                <Button type="primary" htmlType="submit">
+                  {" "}
+                  Tạo{" "}
+                </Button>
+              </Space>
+            </div>
           </Form>
         </div>
       </Context.Provider>
