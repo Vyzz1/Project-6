@@ -171,8 +171,14 @@ function Dashboard() {
         Các công việc đang tuyển dụng{" "}
       </h2>
       <Row gutter={[20, 20]} className="mt-20">
-        <Col xxl={16} xl={16} lg={16} md={24} sm={24} xs={24} offset={4}>
-          <Carousel autoplay={true} dotPosition="top" waitForAnimate>
+        <Col
+          xl={{ span: 16, offset: 4 }}
+          lg={16}
+          md={24}
+          sm={24}
+          xs={{ span: 24, offset: 0 }}
+        >
+          <Carousel autoplay={true} dotPosition="bottom" waitForAnimate>
             {jobs.length > 0 &&
               jobs.map((job) => (
                 <div

@@ -110,7 +110,7 @@ function DetailCv() {
             />
           </Card>
         </Col>
-        <Col xl={8}>
+        <Col xl={8} sm={24} xs={24}>
           <div className="job_wrapper">
             <Divider>
               <p style={{ color: "#437ae9", fontSize: "20px" }}>

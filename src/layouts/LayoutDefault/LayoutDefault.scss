@@ -28,6 +28,11 @@
     justify-content: space-between;
     padding: 0 20px;
     flex: 1;
+    &-left {
+      @media (max-width: 600px) {
+        justify-content: flex-end !important;
+      }
+    }
   }
 
   &__main {
@@ -36,6 +41,9 @@
 
     &--fold {
       margin-left: 80px;
+      @media (max-width: 600px) {
+        margin-left: 0px;
+      }
     }
   }
 
@@ -50,5 +58,26 @@
     left: 0;
     height: calc(100vh - 70px);
     font-size: 20px;
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+}
+.register_layout-button {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+.toggle__button {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+.dropdown-menu-600 {
+  display: none;
+}
+@media (max-width: 600px) {
+  .dropdown-menu-600 {
+    display: flex;
   }
 }

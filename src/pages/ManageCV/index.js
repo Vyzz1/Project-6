@@ -117,7 +117,7 @@ function ManageCv() {
                   <AiOutlineEye />
                 </>
               }
-              onClick={() => handleVisitCV(record?.id)}
+              onClick={() => handleVisitCV(record?.id, record?.status)}
             >
               {" "}
               Chi tiết{" "}
@@ -147,7 +147,12 @@ function ManageCv() {
       </Title>
       <Row>
         <Col xl={24}>
-          <Table columns={columns} dataSource={dataSource} />
+          <Table
+            style={{ margin: "25px 0", overflow: "scroll" }}
+            columns={columns}
+            dataSource={dataSource}
+            size="large"
+          />
         </Col>
       </Row>
     </>

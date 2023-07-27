@@ -14,37 +14,64 @@ function DrawingCompany({ company }) {
       <Row>
         <Col xl={24}>
           <div className="company">
-            <div className="company__img">
-              <Image src={imageCompany}></Image>
-            </div>
-            <div className="company__info">
-              <div className="company__name"> {company.companyName}</div>
-              <div className="company__inner">
-                <IoLocateOutline className="icon_location" />
-                <span className="company__address"> {company.address} </span>
-                <SlPeople className="icon_location" />
-                <span className="company__quantity">
-                  {" "}
-                  {company.quantityPeople} thành viên{" "}
-                </span>
+            <div className="company_container">
+              <div className="company_warpp">
+                <div className="company__img">
+                  <Image src={imageCompany}></Image>
+                </div>
+                <div className="company__name"> {company.companyName}</div>
               </div>
-              <Button
-                icon={
-                  <AiOutlinePlus
-                    size="16px"
-                    style={{ marginBottom: "-3px" }}
-                    color="blue"
-                  />
-                }
-              >
-                {" "}
-                Theo dõi{" "}
-              </Button>
-              <Button style={{ marginLeft: "15px" }} type="primary">
-                {" "}
-                Viết đánh giá{" "}
-              </Button>
+              <div className="company__info">
+                <div className="company__inner">
+                  <IoLocateOutline className="icon_location" />
+                  <span className="company__address"> {company.address} </span>
+                  <SlPeople className="icon_location" />
+                  <span className="company__quantity">
+                    {" "}
+                    {company.quantityPeople} thành viên{" "}
+                  </span>
+                </div>
+                <Row gutter={[10, 10]}>
+                  <Col
+                    xl={{ span: 12, offset: 0 }}
+                    xs={{
+                      span: 12,
+                      offset: 5,
+                    }}
+                  >
+                    <Button
+                      icon={
+                        <AiOutlinePlus
+                          size="16px"
+                          style={{ marginBottom: "-3px" }}
+                          color="blue"
+                        />
+                      }
+                    >
+                      {" "}
+                      Theo dõi{" "}
+                    </Button>
+                  </Col>
+                  <Col
+                    xl={{ span: 12, offset: 0 }}
+                    xs={{
+                      span: 12,
+                      offset: 5,
+                    }}
+                  >
+                    <Button
+                      style={{ marginLeft: "15px" }}
+                      type="primary"
+                      className="button_rate"
+                    >
+                      {" "}
+                      Viết đánh giá{" "}
+                    </Button>
+                  </Col>
+                </Row>
+              </div>
             </div>
+
             <div className="company__rate">
               <Rate disabled defaultValue={rate}></Rate>
               <div className="company__rate-quantity">

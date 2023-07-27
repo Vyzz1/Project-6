@@ -40,7 +40,7 @@ function Searching() {
       {data && (
         <Row>
           {" "}
-          <Col xl={10} offset={7}>
+          <Col xl={{ span: 10, offset: 7 }} xs={{ span: 24 }}>
             {" "}
             <DrawingJobs data={data} />
           </Col>

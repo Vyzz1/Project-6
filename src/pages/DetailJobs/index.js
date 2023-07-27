@@ -119,8 +119,8 @@ function DetailJobs() {
   return (
     <>
       {data && (
-        <Row>
-          <Col xl={16}>
+        <Row gutter={[20, 20]}>
+          <Col xl={16} xs={24}>
             <div className="box1">
               <div className="jobs_detail">
                 <div className="jobs_detail__container">
@@ -191,7 +191,7 @@ function DetailJobs() {
               </div>
             </div>
           </Col>
-          <Col xl={8}>
+          <Col xl={8} xs={24}>
             {company ? (
               <>
                 {" "}
@@ -231,7 +231,7 @@ function DetailJobs() {
         </Row>
       )}
       <Row>
-        <Col xl={12} offset={6}>
+        <Col xl={{ span: 12, offset: 6 }}>
           <Form onFinish={hanldeFinish}>
             <h2 ref={formRef}> Điền thông tin ứng tuyển </h2>
             <Form.Item

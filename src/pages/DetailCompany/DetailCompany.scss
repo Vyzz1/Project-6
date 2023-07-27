@@ -6,6 +6,9 @@
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   margin-bottom: 45px;
+  flex-wrap: wrap;
+
+  align-items: center;
   &__tabs {
     background: #ffffff;
     padding: 15px 25px;
@@ -29,9 +32,15 @@
   }
   &__inner {
     margin: 15px 0;
+    @media (max-width: 576px) {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 25px 0;
+    }
   }
   &__name {
     font-size: 32px;
+    margin-bottom: 15px;
     font-weight: 600;
   }
   &__address {
@@ -51,6 +60,10 @@
     border: 1px solid #437ae9 !important;
     padding: 15px;
     border-radius: 8px;
+    @media (max-width: 576.99px) {
+      margin-left: 0 !important;
+      margin-top: 25px;
+    }
     &-quantity,
     &-percent {
       color: #b5b5b1;
@@ -80,6 +93,7 @@
   &__details {
     margin: 25px 0;
   }
+
   &__des {
     width: auto;
     font-size: 15px;
@@ -90,6 +104,13 @@
     background: #ffffff;
     position: static;
     padding: 15px 25px;
+    @media (max-width: 576px) {
+      margin-right: 0;
+      ul {
+        padding: 0;
+        margin: 10px 0;
+      }
+    }
   }
 }
 .icon_location {
@@ -117,7 +138,13 @@
   margin-right: 15px;
   border: 1px solid #437ae9;
   border-radius: 8px;
-
+  @media (max-width: 576px) {
+    margin-left: 0 !important;
+    padding-left: 18px;
+  }
+  @media (max-width: 576px) {
+    width: 100%;
+  }
   padding: 35px;
   background: #ffffff;
   &__container {
@@ -145,4 +172,25 @@
   position: relative;
   display: flex;
   flex-direction: column;
+}
+.company_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 576.99px) {
+    display: block;
+  }
+}
+.button_rate {
+  @media (max-width: 500px) {
+    margin-left: 0 !important;
+  }
+}
+.company_warpp {
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

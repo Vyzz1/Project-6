@@ -20,7 +20,7 @@ function DetailCompany() {
     };
     fetch();
   }, [idCompany]);
-  console.log(jobs);
+
   useEffect(() => {
     const fetch = async () => {
       const response = await getCompanyDetails(idCompany);
@@ -30,8 +30,37 @@ function DetailCompany() {
     };
     fetch();
   }, [idCompany]);
+  const [layout, setLayout] = useState("vertical");
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [tabPosition, setTabPosition] = useState("left");
+  useEffect(() => {
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", updateWindowWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateWindowWidth);
+    };
+  }, []); // The empty dependency array ensures that the effect runs only once after the initial render
+
+  useEffect(() => {
+    if (windowWidth < 500) {
+      setLayout("horizontal");
+    } else {
+      setLayout("vertical");
+    }
+  }, [windowWidth]);
+  useEffect(() => {
+    if (windowWidth < 767.99) {
+      setTabPosition("top");
+    } else {
+      setTabPosition("left");
+    }
+  }, [windowWidth]);
   const infoCompany = (
-    <Descriptions layout="vertical">
+    <Descriptions layout={layout}>
       <Descriptions.Item label="Tên công ty">
         {company.companyName}
       </Descriptions.Item>
@@ -104,11 +133,10 @@ function DetailCompany() {
     },
     {
       key: 2,
-      label: "Why do you want to join us ?",
+      label: "Motivation",
       children: <> {detailInfoCompany} </>,
     },
   ];
-
   return (
     <>
       {company && (
@@ -118,7 +146,7 @@ function DetailCompany() {
             <Row>
               <Col xl={24}>
                 <Tabs
-                  tabPosition="left"
+                  tabPosition={tabPosition}
                   defaultActiveKey="2"
                   centered
                   items={items}
@@ -127,7 +155,7 @@ function DetailCompany() {
               </Col>
             </Row>
             <Row>
-              <Col xl={12}>
+              <Col xl={12} xs={24}>
                 <div className="company__des">
                   <div className="container">
                     <div className="jobs_container">
@@ -139,7 +167,7 @@ function DetailCompany() {
                   </div>
                 </div>
               </Col>
-              <Col xl={12}>
+              <Col xl={12} xs={24}>
                 <div className="job_company__container">
                   <div className="inner-wrap-title">
                     {" "}

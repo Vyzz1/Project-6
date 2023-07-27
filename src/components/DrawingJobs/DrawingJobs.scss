@@ -13,6 +13,9 @@
   box-sizing: content-box;
   margin-bottom: 30px;
   border: 1px dashed #437ae9;
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
   &:hover {
     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px,
       rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px,
@@ -28,6 +31,11 @@
     display: block;
     background-color: deeppink;
     transition: all 250ms ease-in-out;
+  }
+  &__inner {
+    @media (max-width: 576px) {
+      width: 100%;
+    }
   }
 
   &__time {
@@ -65,9 +73,17 @@
 .button__jobs {
   align-self: center;
 }
+.jobs__tags {
+  @media (max-width: 576px) {
+    margin-bottom: 15px;
+  }
+}
 .jobs__tags .tag {
   padding: 3px 12px !important;
   height: auto;
   width: auto;
   margin-bottom: 8px;
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
 }

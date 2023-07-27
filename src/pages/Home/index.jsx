@@ -29,7 +29,30 @@ function Home() {
     fetch();
   }, []);
   const [tags, setTags] = useState([]);
-  const newArrayLength = 6;
+
+  const [newArrayLength, setNewArrayLength] = useState(6);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", updateWindowWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateWindowWidth);
+    };
+  }, []); // The empty dependency array ensures that the effect runs only once after the initial render
+
+  useEffect(() => {
+    if (windowWidth < 500) {
+      setNewArrayLength(4);
+    } else {
+      setNewArrayLength(6);
+    }
+  }, [windowWidth]);
+
   var randomTags = [];
   useEffect(() => {
     const fetch = async () => {
@@ -91,6 +114,7 @@ function Home() {
     let tag = e.toLowerCase();
     navigate(`/search/all/${tag}`);
   };
+  console.log(windowWidth);
   randomTags = getRandomItemsFromArray(tags, newArrayLength);
   let randomColors = getRandomItemsFromArray(color, newArrayLength);
   const handleOnClickCompany = (e) => {
@@ -106,8 +130,8 @@ function Home() {
       <Context.Provider value={contextValue}>
         {contextHolder}
         <Form onFinish={handleFinish}>
-          <Row justify="center">
-            <Col xl={6}>
+          <Row justify="center" gutter={[10, 10]}>
+            <Col xl={6} xs={24}>
               <Form.Item
                 name="city"
                 rules={[{ required: false }]}
@@ -116,7 +140,7 @@ function Home() {
                 <Select allowClear options={optCity} size="large" />
               </Form.Item>
             </Col>
-            <Col xl={12}>
+            <Col xl={12} sm={24} xs={24}>
               <Form.Item
                 className="input"
                 name="searching"
@@ -124,6 +148,7 @@ function Home() {
               >
                 <Input
                   size="large"
+                  style={{ width: "100%" }}
                   value="input"
                   placeholder="Nhập từ khóa theo kỹ năng, chức vụ, công ty,..."
                 ></Input>
@@ -145,23 +170,31 @@ function Home() {
           <Row>
             <Col>
               <Form.Item>
-                <span> Gợi ý cho bạn :</span>
-                {tags.length > 0 && (
-                  <>
-                    {" "}
-                    {randomTags.map((tag, index) => (
-                      <Tag
-                        key={index + 1}
-                        color={randomColors[index]}
-                        onClick={() => handleOnClick(tag.value)}
-                        className="tag"
-                      >
+                <div style={{ display: "flex" }}>
+                  <span> Gợi ý cho bạn :</span>
+                  <div
+                    style={{
+                      marginLeft: "10px",
+                    }}
+                  >
+                    {tags.length > 0 && (
+                      <>
                         {" "}
-                        {tag.value}{" "}
-                      </Tag>
-                    ))}
-                  </>
-                )}
+                        {randomTags.map((tag, index) => (
+                          <Tag
+                            key={index + 1}
+                            color={randomColors[index]}
+                            onClick={() => handleOnClick(tag.value)}
+                            className="tag"
+                          >
+                            {" "}
+                            {tag.value}{" "}
+                          </Tag>
+                        ))}
+                      </>
+                    )}
+                  </div>
+                </div>
               </Form.Item>
             </Col>
           </Row>
@@ -170,10 +203,10 @@ function Home() {
       <div className="box_head">
         <div className="title"> Top Công Ty Cho Bạn</div>
       </div>
-      <Row gutter={[20, 20]}>
+      <Row gutter={[10, 20]}>
         {company.length > 0 &&
           company.map((value, key) => (
-            <Col xl={8} key={key + 1}>
+            <Col xl={8} key={key + 1} sm={12} xs={12}>
               <div
                 className="boxCompany"
                 onClick={() => handleOnClickCompany(value.id)}

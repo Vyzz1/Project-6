@@ -334,7 +334,7 @@ function SettingJobs() {
             style={{ margin: "25px 0", overflow: "scroll" }}
             dataSource={dataTable}
             columns={columns1}
-            size="large "
+            size="large"
             loading={loading}
           />
         </Col>
