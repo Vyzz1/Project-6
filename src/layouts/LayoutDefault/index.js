@@ -3,7 +3,7 @@ import "./LayoutDefault.scss";
 import logo from "../../images/logo.png";
 import logoFold from "../../images/logo-fold.png";
 import { useEffect, useState } from "react";
-import { DragOutlined, MenuFoldOutlined } from "@ant-design/icons";
+import { MenuFoldOutlined } from "@ant-design/icons";
 import MenuSider from "../../components/MenuSider";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { GetCookie } from "../../GetCookie";
