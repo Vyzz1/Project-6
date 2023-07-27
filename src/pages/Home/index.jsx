@@ -89,23 +89,25 @@ function Home() {
   const [api, contextHolder] = notification.useNotification();
   const openNotification = () => {
     api["warning"]({
-      message: "Vui lòng nhập một trong hai",
+      message: "Vui nhập thông tin để tìm kiếm",
       placement: "topRight",
     });
   };
 
   const handleFinish = (e) => {
+    console.log(e);
     let searching = e.searching;
     let city = e.city;
     if (city == null || city === "Tất cả thành phố") {
       city = "all";
     }
-    if (searching == null) {
+    if (searching == undefined) {
       searching = "all";
     }
 
-    if (searching === "all" && city === "all") {
+    if (searching === "all" && city[0] === "Tất cả thành phố") {
       openNotification();
+
       return;
     }
     navigate(`/search/${city}/${searching}`);
@@ -114,7 +116,6 @@ function Home() {
     let tag = e.toLowerCase();
     navigate(`/search/all/${tag}`);
   };
-  console.log(windowWidth);
   randomTags = getRandomItemsFromArray(tags, newArrayLength);
   let randomColors = getRandomItemsFromArray(color, newArrayLength);
   const handleOnClickCompany = (e) => {
